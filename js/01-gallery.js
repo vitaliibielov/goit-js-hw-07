@@ -32,7 +32,7 @@ function showModal (e) {
          <img src="${e.dataset.source}" width="800" height="600">
     `, {
         onShow: () => document.addEventListener('keydown', onEscClickBtn),
-        onClose: () => document.addEventListener('keydown', onEscClickBtn)
+        onClose: () => document.removeEventListener('keydown', onEscClickBtn)
     });
 
     instance.show();
